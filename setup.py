@@ -19,7 +19,7 @@ setup(
     long_description_content_type="text/markdown",
     install_requires=requirements,
     url="https://github.com/Py2DF/Py2DF",
-    packages=setuptools.find_packages(),
+    packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
