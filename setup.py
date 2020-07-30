@@ -11,7 +11,7 @@ with open('requirements.txt') as f:
 
 setup(
     name="Py2DF", # Replace with your own username
-    version="0.0.1",
+    version="0.0.2",
     author="PgBiel, Skezza",
     author_email="author@example.com",
     description="A tool to convert python scripts to DF code templates.",
