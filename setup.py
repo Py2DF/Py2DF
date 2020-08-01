@@ -10,7 +10,7 @@ with open('requirements.txt') as f:
     requirements = f.read().splitlines()
 
 setup(
-    name="Py2DF", # Replace with your own username
+    name="Py2DF",
     version="0.0.1",
     author="PgBiel, Skezza",
     author_email="author@example.com",
