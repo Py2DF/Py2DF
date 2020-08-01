@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
     
 requirements = []
 with open('requirements.txt') as f:
-  requirements = f.read().splitlines()
+    requirements = f.read().splitlines()
 
 setup(
     name="Py2DF", # Replace with your own username
@@ -18,6 +18,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     install_requires=requirements,
+    include_package_data=True,
     url="https://github.com/Py2DF/Py2DF",
     packages=find_packages(),
     classifiers=[
