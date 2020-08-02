@@ -2782,6 +2782,8 @@ class Control(ActionBlock, JSONData):
             args=self.args.as_json_data(),
             action=self.action.value
         )
+    
+    # region:humanized-control
 
     @classmethod
     def end(cls) -> "Control":
@@ -2899,6 +2901,7 @@ class Control(ActionBlock, JSONData):
             ),
             append_to_reader=True
         )
+    # endregion:humanized-control
 
 
 remove_u200b_from_doc((PlayerAction, EntityAction, GameAction, Control))
