@@ -517,7 +517,7 @@ class GameAction(ActionBlock, JSONData):
 
     @classmethod
     def copy_blocks(cls, loc_1: Locatable, loc_2: Locatable, copy_pos: Locatable, paste_pos: Locatable) -> "GameAction":
-        """Copies a region of blocks from one reagion to another, including air blocks.
+        """Copies a region of blocks from one region to another, including air blocks.
 
         .. rank:: Overlord
 
