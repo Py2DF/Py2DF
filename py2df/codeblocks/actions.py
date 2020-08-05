@@ -2102,7 +2102,7 @@ whose values DF expects to be formatted in one of the following ways:
         Parameters
         ----------
         loc : :attr:`~.Locatable`
-            The new rmor stand's location.
+            The new armor stand's location.
 
         name : Optional[:attr:`~.Textable`], optional
             The new armor stand's name. Default is ``None``.
