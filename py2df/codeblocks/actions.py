@@ -1166,7 +1166,7 @@ whose values DF expects to be formatted in one of the following ways:
         Raises
         ------
         :exc:`TypeError`
-            If `metadata` is not a dict, an Iterable or None.
+            If `metadata` is not a dict, an Iterable or ``None``.
 
         :exc:`ValueError`
             If `metadata` was specified, but `block_type` wasn't.
@@ -1743,7 +1743,7 @@ whose values DF expects to be formatted in one of the following ways:
         Raises
         ------
         :exc:`TypeError`
-            If `metadata` is not a dict, an Iterable or None; also if an invalid `block_type` was passed (e.g.
+            If `metadata` is not a dict, an Iterable or ``None``; also if an invalid `block_type` was passed (e.g.
             text was given but no such material exists).
 
         :exc:`ValueError`
