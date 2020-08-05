@@ -641,7 +641,7 @@ class Player:
         self, *block_types: typing.Optional[typing.Union[BlockParam, Listable]],
         target: typing.Optional[PlayerTarget] = None
     ):
-        """Prevents the player from placing and breaking certain blocks. If no blocks are in the chest, all blocks will be disallowed.
+        """Prevents the player from placing and breaking certain blocks. If no blocks are given as parameters, all blocks will be disallowed.
 
         .. rank:: Noble
 
@@ -780,7 +780,7 @@ class Player:
         self, *block_types: typing.Optional[typing.Union[BlockParam, Listable]],
         target: typing.Optional[PlayerTarget] = None
     ):
-        """Allows the player to place and break certain blocks. If no blocks are in the chest, all blocks will be enabled.
+        """Allows the player to place and break certain blocks. If no blocks are given as parameters, all blocks will be enabled.
 
         .. rank:: Noble
 
@@ -1241,7 +1241,7 @@ class Player:
         self, *items: typing.Union[ItemParam, ItemCollection, typing.Iterable[ItemParam], Listable],
         target: typing.Optional[PlayerTarget] = None
     ):
-        """Gives the player a random item or stack of items from the chest.
+        """Gives the player a random item or stack of items from the list of items.
 
         Parameters
         ----------
@@ -2858,7 +2858,7 @@ class Player:
         keep_current_rotation: bool = False,
         target: typing.Optional[PlayerTarget] = None
     ):
-        """Teleports the player to a random location in the chest.
+        """Teleports the player to a random location from the list of ``locs``.
 
         .. rank:: Noble
 
@@ -3473,7 +3473,7 @@ class Player:
         self, *items: typing.Union[ItemParam, ItemCollection, typing.Iterable[ItemParam], Listable],
         target: typing.Optional[PlayerTarget] = None
     ):
-        """Sets the armor of the player. Place the armor in slots 1-4 of the chest, with 1 being the helmet and 4 being the boots.
+        """Sets the armor of the player. Provide the armor in order as the first-fourth parameters, with the first being the helmet and the fourth being the boots.
 
         Parameters
         ----------
@@ -4171,7 +4171,7 @@ class Player:
         self, *items: typing.Union[ItemParam, ItemCollection, typing.Iterable[ItemParam], Listable],
         target: typing.Optional[PlayerTarget] = None
     ):
-        """Changes the player's inventory according to the items in the parameter chest.
+        """Changes the player's inventory according to the items in the list of parameters.
 
         Parameters
         ----------
