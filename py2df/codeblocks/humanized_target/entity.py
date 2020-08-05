@@ -201,7 +201,7 @@ class Entity:
             Name of disguise. Default is ``None`` (no special name).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -242,7 +242,7 @@ class Entity:
             Whether or not the target creeper should be target. Defaults to ``True`` (should be charged).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -284,7 +284,7 @@ class Entity:
             Whether or not the Creeper is ignited. Defaults to ``True`` (is ignited).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -325,7 +325,7 @@ class Entity:
             Fuse ticks.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -367,7 +367,7 @@ class Entity:
                 The maximum radius is 25.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -419,7 +419,7 @@ class Entity:
                 1 damage = 0.5 hearts
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -451,7 +451,7 @@ class Entity:
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -480,7 +480,7 @@ class Entity:
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -512,7 +512,7 @@ class Entity:
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -541,7 +541,7 @@ class Entity:
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -581,7 +581,7 @@ class Entity:
                 - The target location is rounded to the nearest block.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -615,7 +615,7 @@ class Entity:
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -660,7 +660,7 @@ class Entity:
             If existing effects should be overridden by the given ones. Defaults to ``False`` (no).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -707,7 +707,7 @@ class Entity:
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -746,7 +746,7 @@ class Entity:
                 1 health = 0.5 hearts
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -779,7 +779,7 @@ class Entity:
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -823,7 +823,7 @@ class Entity:
                 For no variant, specify :attr:`~.HorseVariant.NONE`, not ``None`` (``None`` is to keep unchanged).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -879,7 +879,7 @@ class Entity:
                 a variable).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -935,7 +935,7 @@ class Entity:
             to ``False``.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1008,7 +1008,7 @@ class Entity:
             A particle to be the projectile's launch trail. Default is ``None`` (no launch trail).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1074,7 +1074,7 @@ class Entity:
             pull. Defaults to ``False``.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1120,7 +1120,7 @@ class Entity:
             Launch power.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1164,7 +1164,7 @@ class Entity:
             Disguise name (of the mob). Default is ``None`` (no name).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1206,7 +1206,7 @@ class Entity:
             Defaults to :attr:`~.MooshroomVariant.RED`.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1255,7 +1255,7 @@ class Entity:
             The walk speed the mob should have. Default is ``None`` (default walk speed).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1297,7 +1297,7 @@ class Entity:
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1326,7 +1326,7 @@ class Entity:
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1358,7 +1358,7 @@ class Entity:
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1387,7 +1387,7 @@ class Entity:
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1429,7 +1429,7 @@ class Entity:
             Default is ``None``.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1464,7 +1464,7 @@ class Entity:
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1503,7 +1503,7 @@ class Entity:
             .. note:: Does not work with air.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1537,7 +1537,7 @@ class Entity:
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1572,7 +1572,7 @@ class Entity:
             Potion effect(s) to be removed, or a List variable containing them.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1623,7 +1623,7 @@ class Entity:
             .. note:: Player names will be prioritized before mob names.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1664,7 +1664,7 @@ class Entity:
             The type of animation to send (see the EntiytAnimation enum documentation for options).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1711,7 +1711,7 @@ class Entity:
                 - For slimes, magma cubes and phantoms, size is set instead of age.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1749,7 +1749,7 @@ class Entity:
             Whether or not the mob should be unable to age. Defaults to ``True`` (mob cannot age).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1784,7 +1784,7 @@ class Entity:
     #     Parameters
     #     ----------
     #     target : Optional[:class:`~.EntityTarget`], optional
-    #         The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+    #         The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
     #         Defaults to ``None``.
     #
     #     Returns
@@ -1819,7 +1819,7 @@ class Entity:
             The new skin type of the cat (see the CatType docs for options).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1863,7 +1863,7 @@ class Entity:
             The new color of the mob (see EntityColor docs for options).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1904,7 +1904,7 @@ class Entity:
             Fall distance (in blocks).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1946,7 +1946,7 @@ class Entity:
                 A duration of 0 extinguishes the entity (i.e., removes fire).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -1985,7 +1985,7 @@ class Entity:
             The new type of fox fur (either :attr:`~.FoxType.RED` or :attr:`~.FoxType.SNOW`).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -2031,7 +2031,7 @@ class Entity:
             Defaults to :attr:`~.Hand.MAIN_HAND`.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -2092,7 +2092,7 @@ class Entity:
                 Specifying this overrides what was specified for `absorption`.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -2151,7 +2151,7 @@ class Entity:
             Armor item. Default is ``None`` (no armor).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -2192,7 +2192,7 @@ class Entity:
             If ``True``, the horse will have a chest equipped. If ``False``, it won't. Defaults to ``True`` (has chest).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -2234,7 +2234,7 @@ class Entity:
             If ``True``, the entity will be invulnerable. Otherwise (``False``), vulnerable. Defaults to ``True``.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -2277,7 +2277,7 @@ class Entity:
             .. note:: Specifying no owner will clear the item's owner.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -2325,7 +2325,7 @@ class Entity:
             If ``True``, the mob is healed to the new max health. Defaults to ``False`` (not healed).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -2368,7 +2368,7 @@ class Entity:
             If ``True``, the mob will be sitting. Defaults to ``True``.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -2413,7 +2413,7 @@ class Entity:
             If ``True``, the entity's name will be hidden (i.e., not show up above it). Defaults to ``False`` (visible).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -2462,7 +2462,7 @@ class Entity:
             The panda's new hidden gene (see PandaGene docs for options), or ``None`` to not change. Defaults to ``None``.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -2508,7 +2508,7 @@ class Entity:
             The new variant of the target parrot (see ParrotVariant docs for options).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -2550,7 +2550,7 @@ class Entity:
             New pickup delay (in ticks).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -2605,7 +2605,7 @@ class Entity:
             :attr:`~.ArmorStandPart.LEFT_LEG` or :attr:`~.ArmorStandPart.RIGHT_LEG`). Defaults to HEAD.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -2660,7 +2660,7 @@ class Entity:
             The new skin type of the rabbit (see RabbitType docs for options).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -2706,7 +2706,7 @@ class Entity:
             .. note:: Specifying no saddle item will remove the mob's saddle.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -2751,7 +2751,7 @@ class Entity:
             Whether or not the sheep should be sheared. Defaults to ``True``.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -2795,7 +2795,7 @@ class Entity:
             Whether or not the Slime/Magma Cube's AI should be enabled (True) or disabled (False). Defaults to ``True``.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -2841,7 +2841,7 @@ class Entity:
             Target's name (either a player's or a mob's name).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -2888,7 +2888,7 @@ class Entity:
             The fish's new pattern, or ``None`` to keep it unchanged. Defaults to ``None``. (See TropicalFishPattern docs for options.)
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -2939,7 +2939,7 @@ class Entity:
             Defaults to ``None``.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -2981,7 +2981,7 @@ class Entity:
             The villager's new biome type (see VillagerBiome docs for options).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -3023,7 +3023,7 @@ class Entity:
             Whether or not the wolf is angry. Defaults to ``True``.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -3058,7 +3058,7 @@ class Entity:
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -3087,7 +3087,7 @@ class Entity:
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -3116,7 +3116,7 @@ class Entity:
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -3148,7 +3148,7 @@ class Entity:
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -3183,7 +3183,7 @@ class Entity:
             Whether or not the snowman should wear a pumpkin. Defaults to ``True``.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -3230,7 +3230,7 @@ class Entity:
                 - Can overwrite a previous owner.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -3274,7 +3274,7 @@ class Entity:
             If ``True``, the entity will keep its current rotation. Defaults to ``False``.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -3325,7 +3325,7 @@ class Entity:
             Delay between each teleport (in ticks), or ``None`` for the default (60 ticks = 3s). Defaults to ``None``.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -3366,7 +3366,7 @@ class Entity:
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -3398,7 +3398,7 @@ class Entity:
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.EntityAction`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.EntityAction`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -3431,7 +3431,7 @@ class Entity:
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.IfEntity`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.IfEntity`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -3462,7 +3462,7 @@ class Entity:
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.IfEntity`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.IfEntity`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -3493,7 +3493,7 @@ class Entity:
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.IfEntity`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.IfEntity`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -3542,7 +3542,7 @@ class Entity:
             Whether the Y-axis should be ignored when calculating distance. Defaults to ``False`` (no).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.IfEntity`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.IfEntity`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -3593,7 +3593,7 @@ class Entity:
             .. note:: 'Textable' type would be for specifying the item material as text.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.IfEntity`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.IfEntity`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -3645,7 +3645,7 @@ class Entity:
             - text (:attr:`~.Textable` - the material of the block to set as text).
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.IfEntity`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.IfEntity`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -3710,7 +3710,7 @@ given location ...
             Name(s) to check for.
 
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.IfEntity`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.IfEntity`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -3750,7 +3750,7 @@ given location ...
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.IfEntity`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.IfEntity`, or ``dNone`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
@@ -3781,7 +3781,7 @@ given location ...
         Parameters
         ----------
         target : Optional[:class:`~.EntityTarget`], optional
-            The target of this :class:`~.IfEntity`, or None for the current :class:`Entity` instance's target.
+            The target of this :class:`~.IfEntity`, or ``None`` for the current :class:`Entity` instance's target.
             Defaults to ``None``.
 
         Returns
