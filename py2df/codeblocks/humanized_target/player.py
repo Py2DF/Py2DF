@@ -332,7 +332,7 @@ class Player:
         self, text: Textable,
         *, target: typing.Optional[PlayerTarget] = None
     ):
-        """Sets the color of all future messages in chat for the player.
+        """Sets the color of the player's chat messages.
 
         .. rank:: Overlord
 
@@ -400,7 +400,7 @@ class Player:
         )
 
     def clear_effects(self, *, target: typing.Optional[PlayerTarget] = None):
-        """Removes all potion effects from the player.
+        """Removes all of the player's potion effects.
 
         Parameters
         ----------
@@ -490,7 +490,7 @@ class Player:
         self, *items: typing.Union[ItemParam, ItemCollection, typing.Iterable[ItemParam], Listable],
         target: typing.Optional[PlayerTarget] = None
     ):
-        """Removes all of a certain item from the player.
+        """Removes certain item's from the player's inventory.
 
         Parameters
         ----------
@@ -1291,7 +1291,7 @@ class Player:
         )
 
     def set_gm_adventure(self, *, target: typing.Optional[PlayerTarget] = None):
-        """Sets the player's gamemode to adventure mode.
+        """Sets the player's gamemode to adventure.
 
         Parameters
         ----------
@@ -1320,7 +1320,7 @@ class Player:
         )
 
     def set_gm_creative(self, *, target: typing.Optional[PlayerTarget] = None):
-        """Sets the player's gamemode to creative mode.
+        """Sets the player's gamemode to creative.
 
         Parameters
         ----------
@@ -1355,7 +1355,7 @@ class Player:
         )
 
     def set_gm_survival(self, *, target: typing.Optional[PlayerTarget] = None):
-        """Sets the player's gamemode to survival mode.
+        """Sets the player's gamemode to survival.
 
         Parameters
         ----------
@@ -1392,7 +1392,7 @@ class Player:
         Parameters
         ----------
         amount : Optional[:attr:`~.Numeric`], optional
-            Amount to heal. Default is ``None``.
+            Amount to heal. Default is ``None`` (Heal fully).
 
             .. note::
 
@@ -1458,7 +1458,7 @@ class Player:
         )
 
     def enable_keep_inv(self, *, target: typing.Optional[PlayerTarget] = None):
-        """When this code block is executed, the player will keep the contents of their inventory when they die.
+        """Allows players to keep their inventory's contents when they die.
 
         Parameters
         ----------
@@ -1539,7 +1539,7 @@ class Player:
 
             .. note::
 
-                A positive launch power is forward, and a negative one is backward.
+                A negative power will the launch the player backwards.
 
         yaw_only : :class:`bool`, optional
             If ``True``, only yaw is considered on launch axis. If ``False``, pitch is also considered. Defaults
@@ -1556,7 +1556,7 @@ class Player:
 
         Notes
         -----
-        A positive launch power is forward, and a negative one is backward.
+        A positive launch power will the launch the player forward, and a negative one, backward.
 
 
         Examples
@@ -1671,7 +1671,7 @@ class Player:
         Parameters
         ----------
         loc : :attr:`~.Locatable`
-            Launch destination.
+            The location to launch the player towards.
 
         power : Optional[:attr:`~.Numeric`], optional
             Launch power. Default is ``None`` (a default value is assigned for power).
@@ -2454,7 +2454,7 @@ class Player:
         self, *potions: typing.Union[Potionable, Listable],
         target: typing.Optional[PlayerTarget] = None
     ):
-        """Removes 1 or more potion effects from the player.
+        """Removes one or more potion effects from the player.
 
         Parameters
         ----------
