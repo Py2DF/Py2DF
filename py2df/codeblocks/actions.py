@@ -367,7 +367,7 @@ class GameAction(ActionBlock, JSONData):
             The amount of bone meals to apply at once to the blocks.
 
         show_particles : :class:`bool`, optional
-            Whether or not Bone Meal particles should be shown when applied. Defaults to ``True``
+            Whether or not Bone Meal particles should be shown when applied. Defaults to ``True``.
 
         Returns
         -------
@@ -380,7 +380,7 @@ class GameAction(ActionBlock, JSONData):
 
             loc_1 = DFLocation(1, 2, 3)
             loc_2 = DFVariable("my_loc")
-            GameAction.bone_meal(loc_1, loc_2, amount=5, show_particles=True)  # 5 bone meals, with particles.
+            GameAction.bone_meal(loc_1, loc_2, amount=5, show_particles=True)  # 5 lots of bone meal, with particles shown.
         """
         args = Arguments(
             [
@@ -517,7 +517,7 @@ class GameAction(ActionBlock, JSONData):
 
     @classmethod
     def copy_blocks(cls, loc_1: Locatable, loc_2: Locatable, copy_pos: Locatable, paste_pos: Locatable) -> "GameAction":
-        """Copies a region of blocks to another region, including air blocks.
+        """Copies a region of blocks from one reagion to another, including air blocks.
 
         .. rank:: Overlord
 
@@ -530,7 +530,7 @@ class GameAction(ActionBlock, JSONData):
             The second corner of the region to be copied.
 
         copy_pos : :attr:`~.Locatable`
-            The position from which the region is copied.
+            The origin position from which the region is copied.
 
         paste_pos : :attr:`~.Locatable`
             The position from which the region is pasted.
@@ -538,7 +538,7 @@ class GameAction(ActionBlock, JSONData):
             .. note::
 
                 For optimal results, this position should be the same as copy_pos **in relation to the region**
-                (i.e., have same distance or angle from center, for example).
+                (i.e. have same distance or angle from center, for example).
 
         Returns
         -------
@@ -584,7 +584,7 @@ second cooldown."
         Parameters
         ----------
         particle : :attr:`~.ParticleParam`
-            The particle to spawn.
+            The type of particle to spawn.
 
         center : :attr:`~.Locatable`
             The center of the circle.
@@ -640,7 +640,7 @@ second cooldown."
         Parameters
         ----------
         particle : :attr:`~.ParticleParam`
-            The particle to spawn.
+            The type of particle to spawn.
 
         loc_1 : :attr:`~.Locatable`
             The first location (first point of the particle line).
@@ -689,7 +689,7 @@ second cooldown."
         Parameters
         ----------
         particle : :attr:`~.ParticleParam`
-            The particle to spawn.
+            The type of particle to spawn.
 
         base : :attr:`~.Locatable`
             The base location of the spiral.
@@ -719,7 +719,7 @@ second cooldown."
             particle = DFParticle(ParticleType.BARRIER)  # Type of particle.
             base = DFLocation(1, 2, 3, 45, 60)  # 45, 60 are pitch and yaw, to determine the rotation of the spiral
             GameAction.create_animated_particle_spiral(particle, base, 15, 3, 40)
-            # length: 15 blocks; diameter: 3 blocks; duration: 2 s (40 ticks)
+            # length: 15 blocks; diameter: 3 blocks; duration: 40 ticks (2 seconds)
         """
         if diameter is not None and length is None:
             length = 10  # default: 10 blocks
@@ -788,7 +788,7 @@ second cooldown."
         Parameters
         ----------
         particle : :attr:`~.ParticleParam`
-            The particle to spawn.
+            The type of particle to spawn.
 
         center : :attr:`~.Locatable`
             The center of the circle.
@@ -874,7 +874,7 @@ second cooldown."
         Parameters
         ----------
         particle : :attr:`~.ParticleParam`
-            The particle to spawn.
+            The type of particle to spawn.
 
         loc_1 : :attr:`~.Locatable`
             The first location (first point of the particle line).
@@ -915,7 +915,7 @@ second cooldown."
         Parameters
         ----------
         particle : :attr:`~.ParticleParam`
-            Particle to spawn.
+            The type of particle to spawn.
 
         locs : Union[:attr:`~.Locatable`, :attr:`~.Listable`]
             Path locations to go through.
@@ -955,7 +955,7 @@ second cooldown."
         Parameters
         ----------
         particle : :attr:`~.ParticleParam`
-            Particle to spawn.
+            The type of particle to spawn.
 
         origin : :attr:`~.Locatable`
             Ray origin.
@@ -1004,7 +1004,7 @@ second cooldown."
         Parameters
         ----------
         particle : :attr:`~.ParticleParam`
-            Particle type to spawn.
+            The type of particle to spawn.
             
         center : :attr:`~.Locatable`
             Sphere center location.
@@ -1050,7 +1050,7 @@ second cooldown."
         Parameters
         ----------
         particle : :attr:`~.ParticleParam`
-            The particle to spawn.
+            The type of particle to spawn.
 
         base : :attr:`~.Locatable`
             The base location of the spiral.
@@ -1105,7 +1105,7 @@ second cooldown."
         Parameters
         ----------
         loc : :attr:`~.Locatable`
-            The location where to drop a block.
+            The location to drop a block at.
 
         block_type : Optional[Union[:class:`~.Material`, :attr:`~.ItemParam`, :attr:`~.Textable`]]
             The type of block to drop, or ``None`` (see the Note below). Defaults to ``None``.
@@ -1117,7 +1117,7 @@ second cooldown."
 
             .. note::
 
-                If this is ``None``, then the block at the given location is turned into a falling block.
+                If this is ``None``, then the block at the given location would turn into a falling block.
 
         metadata : Optional[Union[:class:`dict`, List[:attr:`~.Textable`]]]
             Optionally, the metadata of the falling block (``None`` for none). If not ``None``, can be in two forms:
@@ -1358,7 +1358,7 @@ lands.
             The :class:`~.Item` (or a variable/game value of item) representing the firework to be launched.
 
         loc : :attr:`~.Locatable`
-            The location where to spawn the firework.
+            The location to spawn the firework.
 
         name : Optional[:attr:`~.Textable`], optional
             The name of the firework, or ``None`` for none. Defaults to ``None``
@@ -1388,7 +1388,7 @@ lands.
             The :class:`~.Item` (or a variable/game value of item) representing the firework (effect) to be launched.
 
         loc : :attr:`~.Locatable`
-            The location where to spawn the firework.
+            The location to spawn the firework at.
 
         Returns
         -------
@@ -1602,10 +1602,10 @@ lands.
         Parameters
         ----------
         particle : :attr:`~.ParticleParam`
-            The particle to spawn.
+            The type of particle to spawn.
 
         loc : :attr:`~.Locatable`
-            The location where to spawn the particle.
+            The location to spawn the particle at.
 
         Returns
         -------
@@ -1630,7 +1630,7 @@ lands.
         Parameters
         ----------
         loc_or_text : Union[:attr:`~.Locatable`, :attr:`~.Textable`]
-            The location or the text of the hologram to remove.
+            The location or text of the hologram to remove.
 
         Returns
         -------
@@ -2173,7 +2173,7 @@ whose values DF expects to be formatted in one of the following ways:
         Parameters
         ----------
         loc : :attr:`~.Locatable`
-            Location to spawn at.
+            Location to spawn the crystal at.
 
         name : Optional[:attr:`~.Textable`], optional
             Custom name for the crystal. Default is ``None``.
@@ -2218,7 +2218,7 @@ whose values DF expects to be formatted in one of the following ways:
         Parameters
         ----------
         loc : :attr:`~.Locatable`
-            Orb location.
+            The location to spawn the orb at.
 
         exp_amount : Optional[:attr:`~.Numeric`], optional
             Experience amount, or ``None`` for a default value set by DF. Default is ``None``.
@@ -2228,7 +2228,7 @@ whose values DF expects to be formatted in one of the following ways:
                 This parameter has to be specified in order to specify `name`, or a :exc:`ValueError` is raised.
 
         name : Optional[:attr:`~.Textable`], optional
-            Orb name, or ``None`` for none.. Default is ``None``.
+            Orb name, or ``None`` for none. Default is ``None``.
 
 
         Returns
@@ -2381,7 +2381,7 @@ whose values DF expects to be formatted in one of the following ways:
             Mob type.
 
         loc : :attr:`~.Locatable`
-            Location to spawn at.
+            Location to spawn the mob at.
 
         health : Optional[:attr:`~.Numeric`], optional
             Mob health. Default is ``None`` (full health).
@@ -2448,7 +2448,7 @@ whose values DF expects to be formatted in one of the following ways:
         *items: typing.Optional[typing.Union[ItemParam, ItemCollection, typing.Iterable[ItemParam], Listable]],
         apply_item_motion: bool = True
     ) -> "GameAction":
-        """Randomly spawns an item at a certain location.
+        """Spawns a random item at a certain location.
 
         Parameters
         ----------
@@ -2519,7 +2519,7 @@ whose values DF expects to be formatted in one of the following ways:
         Parameters
         ----------
         loc : :attr:`~.Locatable`
-            TNT location.
+            The location to spawn the TNT at.
 
         power : Optional[:attr:`~.Numeric`], optional
             TNT power (0-4), or ``None`` for the default (4). Defaults to ``None``.
@@ -2578,7 +2578,7 @@ whose values DF expects to be formatted in one of the following ways:
             - text (:attr:`~.Textable` - the material of the vehicle to spawn as text).
 
         loc : :attr:`~.Locatable`
-            Vehicle location.
+            The location to spawn the vehicle at.
 
         name : Optional[:attr:`~.Textable`], optional
             Vehicle name. Default is ``None``.
@@ -2620,10 +2620,10 @@ whose values DF expects to be formatted in one of the following ways:
         Parameters
         ----------
         loc : :attr:`~.Locatable`
-            Strike location.
+            The location the lightning will strike.
 
         radius : Optional[:attr:`~.Numeric`], optional
-            Damage radius in blocks, or ``None`` for the default (3). Default is ``None``.
+            Damage radius in blocks, or ``None`` for the default (3). Default is ``None`` (3 blocks).
 
 
         Returns
@@ -2785,7 +2785,7 @@ class Control(ActionBlock, JSONData):
 
     @classmethod
     def end(cls) -> "Control":
-        """Stops reading all code after the control block.
+        """Stops reading all code on this event after the control block.
 
         Returns
         -------
@@ -2851,21 +2851,21 @@ class Control(ActionBlock, JSONData):
         ----------
         duration : :attr:`~.Numeric`, optional
             The duration of time to wait for, according to the time unit specified in the ``time_unit`` param.
-            Defaults to ``1``
+            Defaults to ``1``.
 
         time_unit : :class:`~.CWaitTag`, optional
             The time unit that the duration was specified in. Defaults to :attr:`~py2df.enums.actions.CWaitTag.TICKS`.
 
         ticks : :class:`bool`, optional
-            Alternatively, setting this to True sets time_unit to :attr:`~py2df.enums.actions.CWaitTag.TICKS`.
+            Alternatively, setting this to ``True`` sets time_unit to :attr:`~py2df.enums.actions.CWaitTag.TICKS`.
             Defaults to ``True`` .
 
         seconds : :class:`bool`, optional
-            Alternatively, setting this to True sets time_unit to :attr:`~py2df.enums.actions.CWaitTag.SECONDS`.
+            Alternatively, setting this to ``True`` sets time_unit to :attr:`~py2df.enums.actions.CWaitTag.SECONDS`.
             Defaults to ``False`` .
 
         minutes : :class:`bool`, optional
-            Alternatively, setting this to True sets time_unit to :attr:`~py2df.enums.actions.CWaitTag.MINUTES`.
+            Alternatively, setting this to ``True`` sets time_unit to :attr:`~py2df.enums.actions.CWaitTag.MINUTES`.
             Defaults to ``False`` .
 
         Returns
