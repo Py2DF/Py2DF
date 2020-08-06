@@ -560,7 +560,7 @@ class IfGame(IfBlock):
         cls, loc: Locatable, *block_types: typing.Optional[typing.Union[BlockParam, Listable]],
         metadata: typing.Optional[BlockMetadata]
     ):
-        """Checks if a block at a certain location is a certain block.
+        """Checks if a block at the desired location is a certain block.
 
         Parameters
         ----------
@@ -707,7 +707,7 @@ class IfGame(IfBlock):
         cls, *texts: typing.Union[Textable, Listable],
         only_first_word: bool = False, ignore_case: bool = True
     ):
-        """Checks if the command entered in this Command Event is equal to a certain text.
+        """Checks if the command entered in this Command Event is equal to the given text.
 
         .. rank:: Emperor
 
