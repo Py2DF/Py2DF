@@ -2454,7 +2454,7 @@ class Player:
         self, *potions: typing.Union[Potionable, Listable],
         target: typing.Optional[PlayerTarget] = None
     ):
-        """Removes one or more potion effects from the player.
+        """Removes potion effects from the player.
 
         Parameters
         ----------
@@ -2619,7 +2619,7 @@ class Player:
             Item to replace any of `from_items` with.
 
         amount : Optional[:attr:`~.Numeric`], optional
-            Amount of `from_items` to replace, or ``None`` to replace all occurrences. Default is ``None``.
+            Amount of `from_items` to replace, or ``None`` to replace all occurrences. Default is ``None`` (replace all).
 
         target : Optional[:class:`~.PlayerTarget`], optional
             The target of this :class:`~.PlayerAction`, or ``None`` for the current :class:`Player` instance's target.
@@ -2634,12 +2634,12 @@ class Player:
         --------
         ::
             
-            fr_item_1 = Item(Material.STONE, name="My Item")
-            fr_item_2 = ItemVar("some item var")
-            p_default.replace_item(fr_item_1, fr_item_2, to_item=Item(Material.DIAMOND_SWORD), amount=5)
+            frist_item_1 = Item(Material.STONE, name="My Item")
+            first_item_2 = ItemVar("some item var")
+            p_default.replace_item(first_item_1, first_item_2, to_item=Item(Material.DIAMOND_SWORD), amount=5)
             # OR
-            Player(PlayerTarget.DEFAULT).replace_item(fr_item_1, fr_item_2, to_item=Item(Material.DIAMOND_SWORD), amount=5)
-            # replaces up to 5 of either `fr_item_1` or `fr_item_2` with a diamond sword within the default player's inventory.
+            Player(PlayerTarget.DEFAULT).replace_item(first_item_1, first_item_2, to_item=Item(Material.DIAMOND_SWORD), amount=5)
+            # replaces up to 5 of either `first_item_1` or `first_item_2` with a diamond sword within the default player's inventory.
         """
         item_list = flatten(*from_items, except_iterables=[str], max_depth=1)
 
@@ -2715,7 +2715,7 @@ class Player:
         )
 
     def respawn(self, *, target: typing.Optional[PlayerTarget] = None):
-        """Respawns the player if they are dead.
+        """Automatically respawns the player if they are dead.
 
         .. rank:: Mythic
 
@@ -2758,7 +2758,7 @@ class Player:
         Parameters
         ----------
         name : :attr:`~.Textable`
-            Name of player or entity to be ridden.
+            The name of the player or entity to be ridden.
 
         target : Optional[:class:`~.PlayerTarget`], optional
             The target of this :class:`~.PlayerAction`, or ``None`` for the current :class:`Player` instance's target.
@@ -2793,7 +2793,7 @@ class Player:
         )
 
     def remove_arrows(self, *, target: typing.Optional[PlayerTarget] = None):
-        """Clears any arrows stuck  in the player's body.
+        """Clears any arrows stuck in the player's body.
 
         Parameters
         ----------
@@ -3008,10 +3008,10 @@ class Player:
         Parameters
         ----------
         text : :attr:`~.Textable`
-            Advancement text.
+            The text within the advancement popup.
 
         icon : Optional[:attr:`~.ItemParam`], optional
-            Popup icon, or ``None`` for no icon. Default is ``None``.
+            The popup icon, or ``None``  for no icon. Default is ``None``.
 
         adv_type : :class:`~.AdvancementType`, optional
             The type of advancement this is (either :attr:`~.AdvancementType.ADVANCEMENT`,
@@ -3213,7 +3213,7 @@ class Player:
             Messages to send, in order.
 
         delay : Optional[:attr:`~.Numeric`], optional
-            Delay, in ticks, between each message, or ``None`` for the default (60 ticks = 3 s). Default is ``None``.
+            Delay, in ticks, between each message, or ``None`` for the default (60 ticks = 3s). Default is ``None`` (3s).
 
         target : Optional[:class:`~.PlayerTarget`], optional
             The target of this :class:`~.PlayerAction`, or ``None`` for the current :class:`Player` instance's target.
@@ -3310,12 +3310,11 @@ class Player:
                 - Numbers and locations given will be converted to text.
 
         centered : :class:`bool`, optional
-            Whether or not the message should be centered. Defaults to ``False`` (not centered).
-            Regular, Centered
+            Whether or not the message should be centered in the chat window. Defaults to ``False`` (not centered).
 
         add_spaces : :class:`bool`, optional
-            If ``True``, the different text bits will be joined by a space between each. If ``False``, they will be
-            simply added together. Defaults to ``False``.
+            If ``True``, the different text elements will be joined by a space between each. If ``False``, they will be
+            simply added together. Defaults to ``False`` (No added spaces).
 
         target : Optional[:class:`~.PlayerTarget`], optional
             The target of this :class:`~.PlayerAction`, or ``None`` for the current :class:`Player` instance's target.
@@ -3334,7 +3333,7 @@ class Player:
             p_default.send_message("a", "b", centered=True, add_spaces=True)
             # OR
             Player(PlayerTarget.DEFAULT).send_message("a", "b", centered=True, add_spaces=True)
-            # sends message "a b" to the default player (centered and with a space between each text bit).
+            # sends message "a b" to the default player (centered and with a space between each text elements).
         """
         args = Arguments([
             p_check(text, typing.Union[Textable, Listable], f"texts[{i}]") for i, text in
@@ -3377,13 +3376,13 @@ class Player:
             Subtitle text. Default is ``None``.
 
         title_dur : Optional[:attr:`~.Numeric`], optional
-            Title duration (in ticks), or ``None`` for the default (60 ticks = 3 s). Default is ``None``.
+            Title duration (in ticks), or ``None`` for the default (60 ticks = 3s). Default is ``None`` (3s).
 
         start_fade_dur : Optional[:attr:`~.Numeric`], optional
-            Start fade duration (in ticks), or ``None`` for the default (20 ticks = 1 s). Default is ``None``.
+            Start fade duration (in ticks), or ``None`` for the default (20 ticks = 1s). Default is ``None`` (1s).
 
         end_fade_dur : Optional[:attr:`~.Numeric`], optional
-            End fade duration (in ticks), or ``None`` for the default (20 ticks = 1 s). Default is ``None``.
+            End fade duration (in ticks), or ``None`` for the default (20 ticks = 1s). Default is ``None`` (1s).
 
         target : Optional[:class:`~.PlayerTarget`], optional
             The target of this :class:`~.PlayerAction`, or ``None`` for the current :class:`Player` instance's target.
@@ -3403,7 +3402,7 @@ class Player:
             p_default.send_title(title, subtitle, title_dur=40, start_fade_dur=10, end_fade_dur=10)
             # OR
             Player(PlayerTarget.DEFAULT).send_title(title, subtitle, title_dur=40, start_fade_dur=10, end_fade_dur=10)
-            # displays the title "Welcome to the plot!" and subtitle "Enjoy your stay" to the default player for 2 s,
+            # displays the title "Welcome to the plot!" and subtitle "Enjoy your stay" to the default player for 2s,
             # with a fade in and fade out duration of 10 ticks = 0.5 s.
         """
         if title_dur is not None and (start_fade_dur is not None or end_fade_dur is not None):
@@ -3435,7 +3434,7 @@ class Player:
         Parameters
         ----------
         ticks : :attr:`~.Numeric`
-            Breath ticks.
+            Remaining breath ticks (1 bubble = 30 air ticks).
 
         target : Optional[:class:`~.PlayerTarget`], optional
             The target of this :class:`~.PlayerAction`, or ``None`` for the current :class:`Player` instance's target.
@@ -3584,7 +3583,7 @@ class Player:
         Parameters
         ----------
         title : :attr:`~.Textable`
-            Bossbar title.
+            The bossbar's title.
 
         progress : Optional[:attr:`~.Numeric`], optional
             Progress (i.e., how much of the boss bar is filled, from 0 to `limit`), or ``None`` for 0 (not filled).
@@ -3693,7 +3692,7 @@ class Player:
 
             .. note::
 
-                - Multiple text bits will be merged into one to form the chat tag.
+                - Multiple text elements will be merged into one to form the chat tag.
                 - Leave empty to reset the chat tag.
 
         target : Optional[:class:`~.PlayerTarget`], optional
@@ -3784,7 +3783,7 @@ class Player:
         Parameters
         ----------
         item : Optional[:attr:`~.ItemParam`], optional
-            Item to set. Default is ``None``.
+            Item to set. Default is ``None`` (Clear cursor).
 
         target : Optional[:class:`~.PlayerTarget`], optional
             The target of this :class:`~.PlayerAction`, or ``None`` for the current :class:`Player` instance's target.
@@ -3950,7 +3949,7 @@ class Player:
             Item to set. Default is ``None``.
 
         hand_slot : :class:`~.Hand`, optional
-            Hand whose item should be set (either Main Hand or Off Hand). Defaults to Main Hand
+            Hand whose item should be set (either (:attr:`~.Hand.MAIN_HAND`) or (:attr:`~.Hand.OFF_HAND`)). Defaults to Main Hand
             (:attr:`~.Hand.MAIN_HAND`).
 
         target : Optional[:class:`~.PlayerTarget`], optional
@@ -4004,7 +4003,7 @@ class Player:
         Parameters
         ----------
         health : :attr:`~.Numeric`
-            New health.
+            The player's new health.
 
             .. note::
 
@@ -4403,7 +4402,7 @@ class Player:
         self, name_color: Textable,
         *, target: typing.Optional[PlayerTarget] = None
     ):
-        """Sets the color the player's name tag appears in.
+        """Sets the color of the player's name tag in chat.
 
         .. rank:: Noble
 
@@ -4596,20 +4595,20 @@ class Player:
         self, ticks: Numeric,
         *, target: typing.Optional[PlayerTarget] = None
     ):
-        """Sets the time of day for the player only.
+        """Sets the time of day for the target player only.
 
         Parameters
         ----------
         ticks : :attr:`~.Numeric`
-            Time of day (0 to 24 000 ticks).
+            Time of day (0 to 24000 ticks).
 
             .. note::
 
-                - Morning: 1 000 Ticks
-                - Noon: 6 000 Ticks
-                - Afternoon: 7 700 Ticks
-                - Evening: 13 000 Ticks
-                - Midnight: 18 000 Ticks
+                - Morning: 1000 Ticks
+                - Noon: 6000 Ticks
+                - Afternoon: 7700 Ticks
+                - Evening: 13000 Ticks
+                - Midnight: 18000 Ticks
 
         target : Optional[:class:`~.PlayerTarget`], optional
             The target of this :class:`~.PlayerAction`, or ``None`` for the current :class:`Player` instance's target.
@@ -5198,7 +5197,7 @@ class Player:
         ignore_fluids: bool = True,
         target: typing.Optional[PlayerTarget] = None
     ):
-        """Checks if a player is looking at a block of a certain type or at a certain location.
+        """Checks if a player is looking at a certain block type or at a certain location.
 
         Parameters
         ----------
@@ -5611,7 +5610,7 @@ location, at most 10 blocks away ...
         wearing_all: bool = False,
         target: typing.Optional[PlayerTarget] = None
     ):
-        """Checks if a player is wearing an item.
+        """Checks if a player is wearing an item in their armour slots.
 
         Parameters
         ----------
@@ -6383,11 +6382,11 @@ items at slot number 5 ...
 
         Using a predefined list::
 
-            names = ["Bob", John"]
+            names = ["Foo", "Bar"]
             with p_default.name_equals(names):
             # OR
             with Player(PlayerTarget.DEFAULT).name_equals(names):
-                # ... code to be executed if the Default Player's name is either Bob or John ...
+                # ... code to be executed if the Default Player's name is either Foo or Bar ...
                 # note that a list variable with the possible names can also be given.
         """
         args = Arguments([
@@ -6531,7 +6530,7 @@ items at slot number 5 ...
             with p_default.is_sprinting():
             # OR
             with Player(PlayerTarget.DEFAULT).is_sprinting():
-                # ... code to be executed if the Default Player is sprinting, or, if swimming, is using the swm animation ...
+                # ... code to be executed if the Default Player is sprinting, or, if swimming, is using the swim animation ...
         """
         return IfPlayer(
             action=IfPlayerType.IS_SPRINTING,
