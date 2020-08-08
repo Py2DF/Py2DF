@@ -17,7 +17,7 @@ setup(
     description="A tool to convert python scripts to DF code templates.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    install_requires=requirements,
+    install_requires=nbtlib>=1.6.3,<2.0,
     include_package_data=True,
     url="https://github.com/Py2DF/Py2DF",
     packages=find_packages(),
