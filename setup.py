@@ -5,10 +5,6 @@ from setuptools import setup
 with open("README.md", "r") as fh:
     long_description = fh.read()
     
-requirements = []
-with open('requirements.txt') as f:
-    requirements = f.read().splitlines()
-
 setup(
     name="Py2DF",
     version="0.0.1",
@@ -17,7 +13,7 @@ setup(
     description="A tool to convert python scripts to DF code templates.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    install_requires=nbtlib>=1.6.3,<2.0,
+    install_requires=['nbtlib>=1.6.3,<2.0'],
     include_package_data=True,
     url="https://github.com/Py2DF/Py2DF",
     packages=find_packages(),
