@@ -9,7 +9,6 @@ setup(
     name="Py2DF",
     version="0.0.1",
     author="PgBiel, Skezza",
-    author_email="author@example.com",
     description="A tool to convert python scripts to DF code templates.",
     long_description=long_description,
     long_description_content_type="text/markdown",
