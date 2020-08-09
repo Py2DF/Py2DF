@@ -1,6 +1,13 @@
 # Py2DF
 ==========
 
+.. image:: https://img.shields.io/pypi/v/py2df.svg
+   :target: https://pypi.python.org/pypi/py2df
+   :alt: PyPI version info
+.. image:: https://img.shields.io/pypi/pyversions/py2df.svg
+   :target: https://pypi.python.org/pypi/py2df
+   :alt: PyPI supported Python versions
+
 An easy to use and feature-rich tool to convert written, easier to understand python code to a DiamondFire template.
 
 Installing
@@ -8,7 +15,7 @@ Installing
 
 **Python 3.6 or higher is required**
 
-To install the library you can just run the following command:   THIS ISN'T LIVE YET BUT WILL BE SOON TM
+To install the library you can just run the following command:
 
 
     # Linux/macOS
