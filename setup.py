@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 
-from setuptools import setup
+import setuptools
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
     
-setup(
+setuptools.setup(
     name="Py2DF",
     version="0.0.1",
     author="PgBiel, Skezza",
@@ -15,7 +15,7 @@ setup(
     install_requires=['nbtlib'],
     include_package_data=True,
     url="https://github.com/Py2DF/Py2DF",
-    packages=find_packages(),
+    packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
