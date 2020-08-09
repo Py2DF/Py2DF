@@ -17,7 +17,6 @@ Installing
 
 To install the library you can just run the following command:
 
-
     # Linux/macOS
     python3 -m pip install -U Py2DF.py
 
