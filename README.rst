@@ -17,6 +17,8 @@ Installing
 
 To install the library you can just run the following command:
 
+.. code:: sh
+
     # Linux/macOS
     python3 -m pip install -U Py2DF.py
 
@@ -26,13 +28,15 @@ To install the library you can just run the following command:
 
 Quick Example
 --------------
-```py
-@PlayerEvent.Join
-def on_join():
-    player.send_message("Test")
-    player.give_items(Item(material=Material.DIAMOND_SWORD, name="My Sword", lore=["My custom sword"]))
-    player.teleport(Location(50, 50, 50))
-```
+
+.. code:: py
+
+   @PlayerEvent.Join
+   def on_join():
+      player.send_message("Test")
+      player.give_items(Item(material=Material.DIAMOND_SWORD, name="My Sword", lore=["My custom sword"]))
+      player.teleport(Location(50, 50, 50))
+
         
 
 You can find more examples in the examples directory.
