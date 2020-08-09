@@ -262,7 +262,7 @@ to the current location on every iteration).
 
     @classmethod
     def for_each(cls, var: DFVariable, list_to_iterate: Listable, *, allow_list_changes: bool = True) -> "Repeat":
-        """Repeats code once for every index of a list. Each iteration, the var is set to the value at
+        """Repeats once for every element in a list. Every iteration the var is set to the value at
         the current index.
 
         Parameters
@@ -307,7 +307,7 @@ set to the current armor item being analyzed.
 
     @classmethod
     def forever(cls) -> "Repeat":
-        """Repeats code forever.
+        """Repeats code forever (or until lagslayer or a control block stops it)
 
         Returns
         -------
@@ -909,7 +909,7 @@ class SelectObj(UtilityBlock, JSONData):
         Parameters
         ----------
         name : :attr:`~.Textable`
-            The name of the entity(ies) to select.
+            The name of the entity or entities to select.
 
         Returns
         -------
