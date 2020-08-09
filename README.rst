@@ -44,5 +44,5 @@ You can find more examples in the examples directory.
 Links
 ------
 
-- `Documentation <https://py2df.readthedocs.io/en/latest/index.html>`
-- `Official Discord Server <https://discord.gg/eUVVRyE>`
+- `Documentation https://py2df.readthedocs.io/en/latest/index.html`
+- `Official Discord Server https://discord.gg/eUVVRyE`
