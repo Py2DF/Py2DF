@@ -23,9 +23,9 @@ Quick Example
 ```py
 @PlayerEvent.Join
 def on_join():
-    p_default.send_message("Test")
-    p_default.give_items(Item(material=Material.DIAMOND_SWORD, name="My Sword", lore=["My custom sword"]))
-    p_default.teleport(Location(50, 50, 50))
+    player.send_message("Test")
+    player.give_items(Item(material=Material.DIAMOND_SWORD, name="My Sword", lore=["My custom sword"]))
+    player.teleport(Location(50, 50, 50))
 ```
         
 
@@ -34,5 +34,5 @@ You can find more examples in the examples directory.
 Links
 ------
 
-- `Documentation <https://py2df.readthedocs.io/en/latest/index.html>`_
-- `Official Discord Server <https://discord.gg/eUVVRyE>`_
+- `Documentation <https://py2df.readthedocs.io/en/latest/index.html>`
+- `Official Discord Server <https://discord.gg/eUVVRyE>`
