@@ -1730,6 +1730,12 @@ class Player:
         ----------
         power : :attr:`~.Numeric`
             Launch power.
+               
+            .. note:;
+
+                launch distance is calculated with the equation: distance = 0.114*power^2+1.042*power-2.396
+            
+            
 
         target : Optional[:class:`~.PlayerTarget`], optional
             The target of this :class:`~.PlayerAction`, or ``None`` for the current :class:`Player` instance's target.
