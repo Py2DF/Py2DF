@@ -12,7 +12,7 @@ setuptools.setup(
     author="PgBiel, Skezza",
     description="A tool to convert python scripts to DF code templates.",
     long_description=readme,
-    long_description_content_type="text/markdown",
+    long_description_content_type="text/x-rst",
     install_requires=['nbtlib'],
     include_package_data=True,
     url="https://github.com/Py2DF/Py2DF",
