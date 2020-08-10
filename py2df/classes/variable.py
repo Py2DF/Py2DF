@@ -445,8 +445,8 @@ if the variable is equal to at least one of its elements. Example usage::
         --------
         ::
 
-            with var_a.text_contains("bruh", ignore_case=True):
-                # ... code to execute in DF if var_a's text contains "bruh", case insensitively ...
+            with var_a.text_contains("Foo", ignore_case=True):
+                # ... code to execute in DF if var_a's text contains "Foo", case insensitively ...
 
             with var_b.text_contains("test", "ok", "no", ignore_case=False):
                 # ... code to execute in DF if var_c contains one of "test", "ok" or "no", case sensitively ...
@@ -584,7 +584,8 @@ var_b ...
 
         mode : :class:`~.ItemEqComparisonMode`, optional
             The mode of comparison that will determine the equality between self and
-            the given item. Defaults to :attr:`~.EXACTLY_EQUAL`.
+            the given item. (:attr:`~.EXACTLY_EQUAL`, :attr:`~.IGNORE_STACK_SIZE`, 
+            :attr:`~.IGNORE_DURABILITY_AND_STACK_SIZE`, :attr:`~.MATERIAL_ONLY) `Defaults to :attr:`~.EXACTLY_EQUAL`.
 
         Returns
         -------
@@ -595,7 +596,7 @@ var_b ...
         --------
         ::
 
-            with var_a.item_equals(Item(Material.STONE, name="bruh moment"), \
+            with var_a.item_equals(Item(Material.STONE, name="My Stone"), \
 mode=ItemEqComparisonMode.MATERIAL_ONLY):
                 # ... code to execute in DF if 'var_a' item has the same material as the given item; in this case, \
 Stone ...
@@ -663,7 +664,7 @@ Stone ...
         Parameters
         ----------
         objs : :attr:`~.Param`
-            The object(s) that will be checked for being inside the list (i.e., if the list contains it/them).
+            The object(s) that will be checked for being inside the list (i.e. if the list contains it/them).
 
         Returns
         -------
@@ -692,7 +693,7 @@ Stone ...
 
     def list_value_eq(self, index: "Numeric", value: "Param") -> "IfVariable":
         """Checks if a list's value at an index is equal to a given value. Note that `self` has to be a
-        valid :attr:`~.Listable` (i.e., be a valid list).
+        valid :attr:`~.Listable` (i.e. be a valid list).
 
         Note
         ----
@@ -717,13 +718,13 @@ Stone ...
         --------
         ::
 
-            with var_a.list_value_eq(5, "hey"):
-                # ... code that is only executed in DF if the value at index 5 of 'var_a' is equal to "hey"
+            with var_a.list_value_eq(5, "Foo"):
+                # ... code that is only executed in DF if the value at index 5 of 'var_a' is equal to "Foo"
 
-            with list_var_a[5] == "hey":
+            with list_var_a[5] == "Foo":
                 # same as above
 
-            with gval_a[5] == "hey":
+            with gval_a[5] == "Foo":
                 # same as above
         """
 
@@ -770,14 +771,14 @@ Stone ...
         --------
         Example usage::
 
-            with var_a.text_matches("bruh", ignore_case=True):
-                # ... code to execute in DF if var_a's text matches "bruh", case insensitively ...
+            with var_a.text_matches("Foo", ignore_case=True):
+                # ... code to execute in DF if var_a's text matches "Foo", case insensitively ...
 
-            with var_b.text_matches(re.compile(r"br(?:uh|o)", re.IGNORE_CASE)):
+            with var_b.text_matches(re.compile(r"Ba(?:r|th)", re.IGNORE_CASE)):
                 # ... code to execute in DF if var_b's text matches the given regex pattern, case insensitively ...
 
-            with var_c.text_matches("hey", "test", "oh", ignore_case=False):
-                # ... code to execute in DF if var_c matches one of "hey", "test" or "oh", case sensitively ...
+            with var_c.text_matches("Foo", "Bar", "Baz", ignore_case=False):
+                # ... code to execute in DF if var_c matches one of "Foo", "Bar" or "Baz", case sensitively ...
         """
         text_list: typing.List[typing.Union[str, typing.Pattern]] = list(texts)
         for i, text in enumerate(text_list):
