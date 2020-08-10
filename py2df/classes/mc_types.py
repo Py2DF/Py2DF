@@ -819,11 +819,11 @@ class DFText(collections.UserString, DFType):
         --------
         ::
 
-            with DFText("Bruh moment").text_contains(var, ignore_case=True):
-                # ... code to execute in DF if var's text is within "Bruh moment", case insensitively ...
+            with DFText("Foo Bar").text_contains(var, ignore_case=True):
+                # ... code to execute in DF if var's text is within "Foo Bar", case insensitively ...
 
-            with DFText("Bruh 2").text_contains(var_a, var_b, var_c, ignore_case=False):
-                # ... code to execute in DF if "Bruh 2" contains one of var_a, var_b or var_c's text, case sensitive ...
+            with DFText("Bar Baz").text_contains(var_a, var_b, var_c, ignore_case=False):
+                # ... code to execute in DF if "Bar Baz" contains one of var_a, var_b or var_c's text, case sensitive ...
 
         """
         from ..typings import p_check, Textable  # lazy import to avoid cyclic imports
@@ -883,11 +883,11 @@ class DFText(collections.UserString, DFType):
         --------
         Example usage::
 
-            with DFText("Bruh").text_matches(var_a, ignore_case=True):
-                # ... code to execute in DF if "Bruh" matches var_a's text, case insensitively ...
+            with DFText("Foo").text_matches(var_a, ignore_case=True):
+                # ... code to execute in DF if "Foo" matches var_a's text, case insensitively ...
 
-            with DFText("Test").text_matches(var_b, var_c, var_d, ignore_case=False):
-                # ... code to execute in DF if "Test" matches one of var_b's, var_c's or var_d's values, case \
+            with DFText("Bar").text_matches(var_b, var_c, var_d, ignore_case=False):
+                # ... code to execute in DF if "Bar" matches one of var_b's, var_c's or var_d's values, case \
 sensitively ...
         """
         from ..typings import p_check, Textable  # lazy import to avoid cyclic imports
