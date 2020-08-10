@@ -324,7 +324,7 @@ class ItemCollection(collections.UserList):  # [DFType]
         self, item: typing.Union[int, slice]
     ) -> typing.Union[OAcceptableItem, typing.Iterable[OAcceptableItem]]:
         """
-        Get an item at an index. Returns None if there is no item.
+        Get an item at an index. Returns ``None`` if there is no item.
 
         Parameters
         ----------
