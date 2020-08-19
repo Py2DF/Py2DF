@@ -8,7 +8,7 @@ with open('README.rst') as f:
     
 setuptools.setup(
     name="Py2DF",
-    version="0.0.6",
+    version="0.0.7",
     author="PgBiel, Skezza",
     description="A tool to convert python scripts to DF code templates.",
     long_description=readme,
