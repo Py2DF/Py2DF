@@ -130,13 +130,18 @@ class Enchantments(AutoLowerNameEnum):
     RIPTIDE               = auto()  #: Propels the player forward when enchanted item is thrown while in water or rain.
     SHARPNESS             = auto()  #: Increases attack damage dealt to mobs.
     SILK_TOUCH            = auto()  #: Mines blocks themselves (fragile items).
+    SOUL_SPEED            = auto()  #: Walk quicker on soul blocks.
     SMITE                 = auto()  #: Increases attack damage against undead mobs.
     SWEEPING              = auto()  #: Increases damage of sweep attack.
     THORNS                = auto()  #: Causes damage to attackers.
     UNBREAKING            = auto()  #: Increases durability of item.
     VANISHING_CURSE       = auto()  #: Cursed item will disappear after player dies.
+    
+    # Aliases:
+    CURSE_OF_BINDING = BINDING_CURSE
+    CURSE_OF_VANISHING = VANISHING_CURSE
 
-
+  
 class Color:
     """Represents all possible colors and formats of Minecraft. Accessing any attribute returns a string."""
     BLACK         = SECTION_SIGN + "0"
@@ -161,8 +166,10 @@ class Color:
     UNDERLINE     = SECTION_SIGN + "n"
     ITALIC        = SECTION_SIGN + "o"
     RESET         = SECTION_SIGN + "r"
-
-
+    
+    GREY = GRAY
+    DARK_GREY = DARK_GRAY
+    
 Colour = ChatColor = Color  # aliases
 
 
