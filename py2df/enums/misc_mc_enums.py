@@ -89,7 +89,7 @@ class HideFlags(IntFlag):
         return res
 
 
-ALL_HIDE_FLAGS = HideFlags(sum(list(HideFlags)))
+HIDE_ALL_FLAGS = HideFlags(sum(list(HideFlags)))
 """The :class:`HideFlags` instance containing all flags, meaning all kinds of flags should be hidden."""
 
 
