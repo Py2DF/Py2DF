@@ -2424,6 +2424,9 @@ whose values DF expects to be formatted in one of the following ways:
         """
         if p_bool_check(potions, Listable):
             potions = [potions]
+            
+        if potions is None:
+            potions = []
 
         args = Arguments([
             p_check(spawn_egg, SpawnEggable, "spawn_egg"),
